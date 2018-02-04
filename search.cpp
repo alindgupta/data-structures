@@ -6,10 +6,10 @@
 
 // O(n^2) worst case
 // O(n) best case
-void inplace_bubblesort(int *arr, unsigned int length) //-> IO ()
-{
+void inplace_bubblesort(int *arr, unsigned int length) {
+    
     int temp;
-   
+    
     for (int i = length; i > 1; i--) {
          int not_sorted = 0;
         
@@ -38,16 +38,15 @@ void inplace_bubblesort(int *arr, unsigned int length) //-> IO ()
 }
 
 // helper function
-void swap(int *a, int *b)
-{
+void swap(int *a, int *b) {
+    
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
 // try 1, best case is not O(n) comparisons
-void insertion_sort(std::vector<int>& arr)
-{
+void insertion_sort(std::vector<int>& arr) {
     
     int length = static_cast<int>(arr.size());
     
@@ -71,17 +70,14 @@ void insertion_sort(std::vector<int>& arr)
     for (auto i: arr) {
         std::cout << i << '\t';
     }
-    std::cout << std::endl;
-    
+    std::cout << std::endl;   
 }
 
 
 
 // correct version
-void insertion_sort2(std::vector<int>& arr)
-{
-    
-    
+void insertion_sort2(std::vector<int>& arr) {
+      
     int length = static_cast<int>(arr.size());
     
     int curr;
@@ -104,15 +100,13 @@ void insertion_sort2(std::vector<int>& arr)
         }
         arr[j] = curr;
         
-        
         std::cout << "Comparisons: " << comparisons << "\t" << "Swaps: " << swaps << '\n';
     }
     
     for (auto i: arr) {
         std::cout << i << '\t';
     }
-    std::cout << std::endl;
-    
+    std::cout << std::endl;  
 }
 
 
@@ -144,37 +138,3 @@ void selection_sort(std::vector<int>& arr) {
         printf("\n");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
